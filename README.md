@@ -73,7 +73,7 @@ So you may want callbacks, such as after_delete, before_delete, and after_resurr
 
 If you'd like to contribute a feature or bugfix: Thanks. To make sure your fix/feature has a high chance of being included, please read the following guidelines:
 
-1. Post a [pull request](https://github.com/thoughtbot/paperclip/compare/).
+1. Post a [pull request](https://github.com/nwwatson/resurrection/compare/).
 2. Make sure there are tests! It's a rare time when explicit tests aren't needed. If you have questions about writing tests for paperclip, please open a [GitHub issue](https://github.com/nwwatson/resurrection/issues/new).
 
 
