@@ -1,2 +1,3 @@
-# resurrection
-Delete ActiveRecord records and raise them back from the dead.
+= Resurrection
+
+This project rocks and uses MIT-LICENSE.
