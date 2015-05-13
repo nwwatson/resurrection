@@ -11,7 +11,14 @@ gem 'resurrection', github: 'nwwatson/resurrection'
 ```
 # Use
 
-Okay, lets use this sucker. All the work is done in a Concern. Yeah, I know, there are those that are against Concerns. I'm not. I don't like voodoo magic that appears when I don't expect it to (ie, adding it to ActiveRecord::Base). This simple include reminds me that I have the power to raise stuff from the dead
+Okay, lets use this sucker. First we need to add a deleted_at field to our model.
+
+```
+bundle exec rails g migration add_column_deleted_at_to_jesuses deleted_at:datetime
+```
+
+
+All the work is done in a Concern. Yeah, I know, there are those that are against Concerns. I'm not. I don't like voodoo magic that appears when I don't expect it to (ie, adding it to ActiveRecord::Base). This simple include reminds me that I have the power to raise stuff from the dead
 
 ```
 include Resurrection::Model
