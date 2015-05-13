@@ -1,3 +1,53 @@
-= Resurrection
+# Resurrection
 
-This project rocks and uses MIT-LICENSE.
+Christ died on a Friday, and rose again on Sunday. In honor of these feat, I present resurrection. You can delete an object and bring it back to life. Simple as that.
+
+# Installation
+
+Add this line to your gemfile. I'm not adding this to rubygems. theres a million of these suckers out there. This one is mine with my own little tweaks. Feel free to use it.
+
+```
+gem 'resurrection', github: 'nwwatson/resurrection'
+```
+# Use
+
+Okay, lets use this sucker. All the work is done in a Concern. Yeah, I know, there are those that are against Concerns. I'm not. I don't like voodoo magic that appears when I don't expect it to (ie, adding it to ActiveRecord::Base). This simple include reminds me that I have the power to raise stuff from the dead
+
+```
+include Resurrection::Model
+```
+
+For those of you who are challenged, your model may look something like this....
+
+```
+class Jesus < ActiveRecord::Base
+  include Resurrection::Model
+end
+```
+
+Jesus is my model. You can make your model whatever you want.
+
+So lets delete something. I know what your thinking.... Why didn't you name it crucify? Well, I don't want to crucify things. Its a very painful death. I don't want to relive Passion of the Christ every time I delete an object. A simple delete will do for me.
+
+```
+my_model = Model.find(params[id])
+my_model.delete
+```
+
+You can also use delete! if you are so include. If it makes you feel like your really deleting it with the "delete!", then use it. They both do the same thing.
+
+# Callback awesomeness
+
+So you may want callbacks, such as after_delete, before_delete, and after_resurrection. They are there for the taking.
+
+# Contributing
+
+If you'd like to contribute a feature or bugfix: Thanks. To make sure your fix/feature has a high chance of being included, please read the following guidelines:
+
+1. Post a [pull request](https://github.com/thoughtbot/paperclip/compare/).
+2. Make sure there are tests! It's a rare time when explicit tests aren't needed. If you have questions about writing tests for paperclip, please open a [GitHub issue](https://github.com/nwwatson/resurrection/issues/new).
+
+
+# License
+
+This rocks the MIT license. Live long an prosper.
