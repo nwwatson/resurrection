@@ -1,6 +1,6 @@
 # Resurrection
 
-Christ died on a Friday, and rose again on Sunday. In honor of these feat, I present resurrection. You can delete an object and bring it back to life. Simple as that.
+Christ died on a Friday, and rose again on Sunday. In honor of this feat, I present Resurrection. You can delete an object and bring it back to life. Simple as that.
 
 # Installation
 
