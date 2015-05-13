@@ -43,6 +43,28 @@ my_model.delete
 
 You can also use delete! if you are so include. If it makes you feel like your really deleting it with the "delete!", then use it. They both do the same thing.
 
+Many gems add a default scope hiding deleted items from your view. I don't like this. Your model will have scopes in it to help you find records. The scopes are available and deleted. For example, if I want to view all non deleted files id do this:
+
+```
+Model.available
+```
+
+Likewise,  I can find all deleted
+
+```
+Model.deleted
+```
+
+Okay, its time to resurrect something. I like that. Because Jesus made resurrection possible, I'm going to resurrect him.
+
+```
+jesus = Jesus.first
+jesus.resurrect!
+```
+
+Noticed I used "ressurect!" I did this because its Jesus. If it wasn't him, i'm just call resurrect. They both do the same thing, but Jesus is special, and he deserves a bang at the end.
+
+
 # Callback awesomeness
 
 So you may want callbacks, such as after_delete, before_delete, and after_resurrection. They are there for the taking.
