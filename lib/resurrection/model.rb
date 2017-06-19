@@ -1,7 +1,7 @@
 module Resurrection
   module Model
     extend ActiveSupport::Concern
-    
+
     included do
       include ActiveSupport::Callbacks
       scope :available, lambda { where(deleted_at: nil) }
@@ -11,24 +11,24 @@ module Resurrection
       define_callbacks :deleted
       set_callback :deleted, :after, :after_delete
 
-      # Define Restored Callback
+      # Define Resurrected Callback
       define_callbacks :resurrected
       set_callback :resurrected, :after, :after_resurrection
     end
-    
+
     def delete
       # if the record is new or destroyed, do nothing
       return if new_record? or deleted?
-  
+
       # Calls before_delete callbacks before deletion takes place
       run_callbacks :deleted do
         update_attribute_or_column :deleted_at, Time.now
       end
     end
     alias :delete! :delete
-    
+
     def resurrect
-      run_callbacks :restored do
+      run_callbacks :resurrected do
         update_attribute_or_column :deleted_at, nil
       end
     end
@@ -37,7 +37,7 @@ module Resurrection
     def deleted?
       !self.deleted_at.nil?
     end
-    
+
     def after_delete
      return
     end
